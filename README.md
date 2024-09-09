@@ -37,27 +37,41 @@ Also, put the answers in the "Query Responses" section of this README.
 
 1. Select all fields from users where the city equals Chicago
 
+SELECT * FROM users WHERE city = 'chicago'
+
 2. Select the "state" field for users with a first name of "Glory"
+
+SELECT state FROM users WHERE first_name LIKE 'Glory%'
 
 3. Select all fields from users whose phone1 starts with "773"
 
+SELECT * FROM users WHERE phone1 LIKE '773%'
+
 ## Query Responses
 
+SELECT * FROM users WHERE city = 'chicago'
 1.
-  * How many rows were returned:
-  * First name of the first user:
+  * How many rows were returned: 7
+  * First name of the first user: Mitsue
 
-2.
-  * How many rows were returned:
-  * What states do they live in:
+SELECT state FROM users WHERE first_name LIKE 'Glory%'
+2. 
+  * How many rows were returned: 2 
+  * What states do they live in: MD and TX
 
+SELECT * FROM users WHERE phone1 LIKE '773%'
 3.
-  * How many rows were returned:
-  * What's the last email on the list:
+  * How many rows were returned: 6
+  * What's the last email on the list: 'nichelle_meteer@meteer.com'
 
 ## Summary
 
 Think about how this data is laid out. Feel free to look in the `initialize.sql` file to see the raw data.
 
 * Do you think it would be easier or harder to search through this data manually or using SQL?
+
+using SQL for sure
+
 * What about when the dataset gets larger?
+
+still SQL is good
